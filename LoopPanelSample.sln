@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopPanelSample", "LoopPanelSample.csproj", "{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}.Debug|Any CPU.Build.0 = Debug|x86
+		{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}.Release|Any CPU.ActiveCfg = Debug|x86
+		{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}.Release|Any CPU.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B04CCE74-CFDF-4929-AFA5-4AAAE4216EFD}
+	EndGlobalSection
+EndGlobal

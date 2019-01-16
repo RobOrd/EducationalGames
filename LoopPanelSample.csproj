@@ -1,0 +1,178 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
+    <DefaultClrNameSpace>UntitledProject3</DefaultClrNameSpace>
+    <AssemblyName>LoopPanelSample</AssemblyName>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AlwaysCompileMarkupFilesInSeparateDomain>false</AlwaysCompileMarkupFilesInSeparateDomain>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LoopPanelSample</RootNamespace>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ProjectGuid>{3593DC2D-74E5-4EED-8C6B-20FC38B9320C}</ProjectGuid>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetZone>Internet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <ManifestCertificateThumbprint>5464C53EF40D1B85C23B3D1835895ED10AC42AC8</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DrWPF.pfx</ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://drwpf.com/Apps/LoopPanelSample/</InstallUrl>
+    <SupportUrl>http://drwpf.com/Apps/LoopPanelSample/publish.htm</SupportUrl>
+    <ProductName>LoopPanel Sample</ProductName>
+    <PublisherName>Dr. WPF</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Character.cs" />
+    <Compile Include="CharacterCollection.cs" />
+    <Compile Include="DoubleHelper.cs" />
+    <Compile Include="LoopingListBox.cs" />
+    <Compile Include="BeginDragEventArgs.cs" />
+    <Compile Include="LoopPanel.cs" />
+    <Compile Include="RoutedEventHelper.cs" />
+    <Compile Include="AppWindow.xaml.cs">
+      <DependentUpon>AppWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ba.png" />
+    <Resource Include="Images\Be.png" />
+    <Resource Include="Images\Bi.png" />
+    <Resource Include="Images\Bo.png" />
+    <Resource Include="Images\Bu.png" />
+    <Resource Include="Images\ca.png" />
+    <Resource Include="Images\ce.png" />
+    <Resource Include="Images\ci.png" />
+    <Resource Include="Images\co.png" />
+    <Resource Include="Images\cu.png" />
+    <Resource Include="Images\da.png" />
+    <Resource Include="Images\de.png" />
+    <Resource Include="Images\di.png" />
+    <Resource Include="Images\do.png" />
+    <Resource Include="Images\du.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fa.png" />
+    <Resource Include="Images\fe.png" />
+    <Resource Include="Images\fi.png" />
+    <Resource Include="Images\fo.png" />
+    <Resource Include="Images\fu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ga.png" />
+    <Resource Include="Images\ge.png" />
+    <Resource Include="Images\gi.png" />
+    <Resource Include="Images\go.png" />
+    <Resource Include="Images\gu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ha.png" />
+    <Resource Include="Images\he.png" />
+    <Resource Include="Images\hi.png" />
+    <Resource Include="Images\ho.png" />
+    <Resource Include="Images\hu.png" />
+    <Resource Include="Images\ja.png" />
+    <Resource Include="Images\je.png" />
+    <Resource Include="Images\ji.png" />
+    <Resource Include="Images\jo.png" />
+    <Resource Include="Images\ju.png" />
+  </ItemGroup>
+</Project>
